@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { AppointmentForm } from "../../components/appointmentForm/AppointmentForm";
 import { TileList } from "../../components/tileList/TileList";
 
-export const AppointmentsPage = ({appointments, contacts, addApointment}) => {
+export const AppointmentsPage = ({appointments, contacts, addAppointment}) => {
 
   const [name, setName] = useState('');
   const [contact, setContact] = useState('');
@@ -13,7 +13,7 @@ export const AppointmentsPage = ({appointments, contacts, addApointment}) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    addApointment(name, contact, date, time);
+    addAppointment(name, contact, date, time);
     setName('');
     setContact('');
     setDate('');
